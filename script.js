@@ -22,13 +22,20 @@ document.querySelector("form").onsubmit = () => {
 
   document.querySelectorAll("#tasks").forEach((item) => {
     let deleteBtn = document.createElement("span");
+    let completedBtn = document.createElement("span");
+    completedBtn.innerHTML = "Completed";
+    completedBtn.classList = "completeBtn";
+    li.appendChild(completedBtn);
     deleteBtn.innerHTML = "X";
     deleteBtn.classList = "deleteBtn";
     li.appendChild(deleteBtn);
     item.appendChild(li);
 
-    deleteBtn.addEventListener("click", (e) => {
+    deleteBtn.addEventListener("click", () => {
       li.classList = "remove";
+    });
+    completedBtn.addEventListener("click", () => {
+      li.classList.toggle("complete");
     });
   });
 
