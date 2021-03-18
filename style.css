@@ -1,0 +1,14 @@
+.deleteBtn {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.ul {
+  font-size: 2rem;
+  font-style: oblique;
+  list-style: none;
+}
+
+.remove {
+  display: none;
+}
