@@ -1,9 +1,39 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: rgb(238, 238, 238);
+}
+
+h3 {
+  padding: 1.5rem;
+}
+.theme-wrapper {
+  display: flex;
+  margin: 0 auto;
+}
+.red {
+  background-color: rgb(148, 43, 43);
+  cursor: pointer;
+  color: white;
+}
+
+.blue {
+  background-color: rgb(54, 54, 131);
+  color: white;
+  cursor: pointer;
+}
+.gold {
+  background-color: rgb(158, 139, 29);
+  color: white;
+  cursor: pointer;
+}
 .deleteBtn {
   padding: 1rem;
   cursor: pointer;
   font-size: 1.5rem;
 }
-
 .ul {
   font-size: 2rem;
   font-style: oblique;

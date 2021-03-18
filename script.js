@@ -1,3 +1,30 @@
+// color editor
+
+let red = document.querySelector(".red");
+let blue = document.querySelector(".blue");
+let gold = document.querySelector(".gold");
+
+let arr = [red, blue, gold];
+
+// declare a fuinction get this with color parameter
+// ¸inside of function acess body style background color and add param to it
+function getThis(color) {
+  document.querySelector("body").style.backgroundColor = color;
+}
+
+// ¸loot thogruh element and add listeners to it on click with event callback
+// when element is clicked it will call getThis function and pass to it event.target.className
+arr.forEach((element) => {
+  element.addEventListener("click", (event) => {
+    getThis(event.target.className);
+  });
+  // console.log(element);
+});
+//  çhange font color to red
+
+ 
+
+
 //by default submit button should be disabled
 document.querySelector("#submit").disabled = true;
 
