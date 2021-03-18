@@ -47,3 +47,24 @@ document.querySelector("form").onsubmit = () => {
   // stop form from submitting
   return false;
 };
+
+// if there is noit something in localstorage called counter
+if (!localStorage.getItem("counter")) {
+  localStorage.setItem("counter", 0);
+}
+
+// selects counter class and inside of its innerhtml adds counter number
+function count() {
+  let counter = localStorage.getItem("counter");
+  counter++;
+  // set the value of counter to innerhtml
+  document.querySelector(".counter").innerHTML = counter;
+  localStorage.setItem("counter", counter);
+}
+ 
+
+// accsess counter element and give it localstorage 
+document.querySelector(".counter").innerHTML = localStorage.getItem("counter");
+document.querySelector("button").addEventListener("click", count);
+
+// call  count every second
